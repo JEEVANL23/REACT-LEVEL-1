@@ -1,5 +1,13 @@
-import React,{Component} from 'react';
+import React from 'react';
 
+
+// using function component
+function Titlecontent(props) {
+ 
+    return <h1> {props.title} </h1>  
+}
+
+/*  USING CLASS COMPONENT
 
 class Titlecontent extends Component{
     render() {
@@ -7,5 +15,5 @@ class Titlecontent extends Component{
     }
 }
 
-
+*/
 export default Titlecontent

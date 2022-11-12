@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React from "react";
 import Titlecontent from "./title";
 import Photowall from "./photowall";
 
@@ -15,16 +15,40 @@ const posts = [{
     id: "2",
     description: "On a vacation!",
     imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
+    },{
+    id: "3",
+    description: "Aliens???",
+    imageLink: "https://s3.india.com/wp-content/uploads/2017/12/rocket.jpg"
+    
     }]
 
+
+// USING stateless FUNCTION COMPONENT
+function Main(props) {
+    return  <div>
+
+    <Titlecontent title = {'Photowall'}/>
+    <Photowall posts = {posts}/>    
+        
+            </div>   
+}
+
+
+/*  USING CLASS COMPONENT
 class Main extends Component{
     render(){
         return <div>
             <Titlecontent title = {'Photowall'}/>
-            <Photowall posts = {posts}/>
+            <Photowall posts = {posts}/>    
         </div>
     }
-}          // same component different data from the props 
+}          // photowall instance passes an array of data named post
 
+// in main.js , main component renders both title and photowall instances
+
+// from photowall instance we are passin an array as props and mapping over that array inside of photowall class 
+
+
+*/
 
 export default Main
